@@ -195,96 +195,161 @@
         <div class="categoria-item">LORO</div>
         <div class="categoria-item" style="color: #ff0000; font-weight: 800;">🔥 OFERTAS</div>
     </div>-->
+   
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yako Mundo Mascotas</title>
+    <style>
+        /* ==========================================
+           ESTILOS PARA EL BANNER ADAPTABLE SIN CORTES
+           ========================================== */
+        .banner-pequeno-horizontal {
+            width: 100%;
+            height: 350px; /* Altura fija base para computadores que garantiza que se vea toda la imagen */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Fondo de dos colores (Izquierda y Derecha) para que coincida exactamente con los tonos de tu imagen */
+            background: linear-gradient(90deg, #61adf4 0%,#61adf4 50%, #459be2 50%, #3192e1 100%);
+            overflow: hidden;
+        }
+
+        .banner-pequeno-horizontal img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Muestra el 100% de la imagen original sin recortar ni el perro ni las letras */
+            display: block;
+        }
+
+        /* ==========================================
+           CONTENEDOR DE LAS TARJETAS
+           ========================================== */
+        .contenedor-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        /* ESTILO DE CADA TARJETA */
+        .servicio-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        /* CONTENEDOR DE LA IMAGEN */
+        .imagen-container {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .imagen-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .servicio-card:hover .imagen-container img {
+            transform: scale(1.05);
+        }
+
+        /* INFORMACIÓN */
+        .info-servicio {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .info-servicio h3 {
+            font-size: 1.4rem;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 800;
+            text-transform: uppercase;
+            border-bottom: 3px solid #f39c12;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .info-servicio p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* ==========================================
+           ADAPTABILIDAD DE ALTURA PARA DIFERENTES COMPUTADORES
+           ========================================== */
+        @media (min-width: 1400px) {
+            .banner-pequeno-horizontal {
+                height: 420px; /* Pantallas muy grandes de PC */
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .banner-pequeno-horizontal {
+                height: 280px; /* Laptops y pantallas medianas */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner-pequeno-horizontal {
+                height: 180px; /* Tablets y celulares grandes */
+            }
+            .imagen-container {
+                height: 220px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .banner-pequeno-horizontal {
+                height: 130px; /* Celulares pequeños */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BANNER ACOPLADO SIN CORTES -->
     <div class="banner-pequeno-horizontal">
         <img src="imagen baño/RESERVA YA.png" alt="Promoción Perros">
     </div>
 
 </body>
 </html>
-<style>
-    /* CONTENEDOR DE LAS TARJETAS */
-    .contenedor-cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: center;
-        padding: 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-        box-sizing: border-box; /* Previene desbordes */
-    }
-
-    /* ESTILO DE CADA TARJETA */
-    .servicio-card {
-        background: #fff;
-        border-radius: 20px;
-        overflow: hidden;
-        width: 100%; /* Por defecto para móvil */
-        max-width: 450px; /* Tamaño máximo en PC */
-        box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-    }
-
-    .servicio-card:hover {
-        transform: translateY(-5px); /* Reducción de movimiento para evitar cortes en móvil */
-        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    }
-
-    /* CONTENEDOR DE LA IMAGEN */
-    .imagen-container {
-        width: 100%;
-        height: 300px; /* Altura ajustada para mayor equilibrio */
-        overflow: hidden;
-    }
-
-    .imagen-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.5s ease;
-    }
-
-    .servicio-card:hover .imagen-container img {
-        transform: scale(1.05); /* Zoom más sutil */
-    }
-
-    /* INFORMACIÓN */
-    .info-servicio {
-        padding: 25px;
-        text-align: center;
-    }
-
-    .info-servicio h3 {
-        font-size: 1.4rem;
-        color: #333;
-        margin-bottom: 15px;
-        font-weight: 800;
-        text-transform: uppercase;
-        border-bottom: 3px solid #f39c12;
-        display: inline-block;
-        padding-bottom: 5px;
-    }
-
-    .info-servicio p {
-        color: #666;
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    /* Ajuste específico para móviles */
-    @media (max-width: 600px) {
-        .imagen-container {
-            height: 220px; /* Menor altura en móvil para que no ocupe toda la pantalla */
-        }
-        .info-servicio {
-            padding: 20px;
-        }
-    }
-</style>
-
 
 <section class="servicios-gatos">
     <h2 class="titulo-seccion" style="text-align:center; font-size: 2.5rem; margin-bottom: 40px; font-weight: 800;">Nuestros Servicios Principales</h2>
@@ -703,9 +768,9 @@
 .galeria-contenedor-principal {
     position: relative;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 30px auto;
-    padding: 0 45px;
+    padding: 0 50px;
     box-sizing: border-box;
 }
 
@@ -734,6 +799,7 @@
     animation-play-state: paused !important;
 }
 
+/* Tamaño base por defecto (Computadores y Laptops) */
 .item-par {
     position: relative;
     width: 250px;
@@ -790,14 +856,14 @@
 }
 
 .btn-prev {
-    left: 0px; 
+    left: 5px; 
 }
 
 .btn-next {
-    right: 0px; 
+    right: 5px; 
 }
 
-/* Animaciones personalizadas para ambos lados */
+/* Animaciones personalizadas */
 @keyframes desplazarIzquierda {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -806,6 +872,60 @@
 @keyframes desplazarDerecha {
     0% { transform: translateX(-50%); }
     100% { transform: translateX(0); }
+}
+
+/* ==========================================
+   DISEÑO RESPONSIVO (ADAPTABLE A CADA PANTALLA)
+   ========================================== */
+
+/* 1. Televisores y Pantallas Gigantes (1400px en adelante) */
+@media (min-width: 1400px) {
+    .galeria-contenedor-principal {
+        max-width: 1500px;
+    }
+    .item-par {
+        width: 290px;
+        height: 210px;
+    }
+}
+
+/* 2. Tablets y Computadores Medianos (768px a 1024px) */
+@media (max-width: 1024px) {
+    .item-par {
+        width: 220px;
+        height: 160px;
+    }
+    .galeria-contenedor-principal {
+        padding: 0 40px;
+    }
+}
+
+/* 3. Celulares y Smartphones (Menos de 768px) */
+@media (max-width: 768px) {
+    .item-par {
+        width: 170px;
+        height: 130px;
+    }
+    .galeria-contenedor-principal {
+        padding: 0 35px;
+        margin: 20px auto;
+    }
+    .btn-carrusel {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
+
+/* 4. Celulares muy pequeños (Menos de 480px) */
+@media (max-width: 480px) {
+    .item-par {
+        width: 140px;
+        height: 110px;
+    }
+    .galeria-contenedor-principal {
+        padding: 0 30px;
+    }
 }
 </style>
 
@@ -819,7 +939,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function moverCarrusel(direccion) {
     const slider = document.getElementById('sliderTrack');
-    const desplazamiento = 270; // 250px de ancho + 20px de gap
+    
+    // Obtener el ancho real dinámico de la tarjeta según el dispositivo actual
+    const tarjeta = slider.querySelector('.item-par');
+    const anchoTarjeta = tarjeta.offsetWidth;
+    
+    // Calcular el gap (espacio entre tarjetas) leyendo el computed style
+    const gap = parseInt(window.getComputedStyle(slider).gap) || 20;
+    const desplazamiento = anchoTarjeta + gap;
     
     // 1. Pausar la animación actual y congelar en la posición exacta donde está
     const style = window.getComputedStyle(slider);
@@ -829,11 +956,10 @@ function moverCarrusel(direccion) {
     slider.style.animation = 'none';
     slider.classList.remove('animar-izquierda', 'animar-derecha');
 
-    // Cancelar cualquier temporizador anterior si el usuario hace clic varias veces seguidas
+    // Cancelar cualquier temporizador anterior si el usuario hace clic varias veces
     if (timeoutPausa) clearTimeout(timeoutPausa);
 
     // 2. Mover la foto a la dirección elegida de forma fluida
-    // Si direccion es 1 (derecha), restamos; si es -1 (izquierda), sumamos
     currentX += (direccion * desplazamiento);
 
     // Validar límites del bucle infinito (50%)
@@ -849,18 +975,78 @@ function moverCarrusel(direccion) {
 
     // 3. Esperar 3 segundos estático en la foto actual, y luego reiniciar la animación automática hacia el lado correspondiente
     timeoutPausa = setTimeout(() => {
-        slider.style.transition = 'none'; // Quitar transición para que el cambio de animación sea limpio
+        slider.style.transition = 'none'; // Quitar transición para que el cambio sea limpio
         
-        // Asignar la nueva dirección del carrusel según la flecha presionada
-        // Si presionó derecha (1), el carrusel debe continuar hacia la izquierda (-50%). Si presionó izquierda (-1), debe continuar hacia la derecha (0).
+        // Si presionó derecha (1), continúa hacia la izquierda. Si presionó izquierda (-1), continúa hacia la derecha.
         if (direccion === 1) {
             slider.classList.add('animar-izquierda');
         } else {
             slider.classList.add('animar-derecha');
         }
-    }, 3000); // 3000 milisegundos = 3 segundos de pausa
+    }, 3000); // 3 segundos de pausa
 }
 </script>
+
+
+
+
+
+
+
+
+<section class="seccion-requisitos">
+
+    <h2 class="titulo-requisitos">Requisitos para el Servicio</h2>
+
+    <p class="subtitulo-requisitos">Para garantizar la seguridad de todos nuestros peludos, solicitamos lo siguiente:</p>
+
+    
+
+    <div class="contenedor-requisitos">
+
+        <div class="card-requisito">
+
+            <i class="fas fa-birthday-cake"></i>
+
+            <h4>Edad Mínima</h4>
+
+            <p>Tu mascota debe tener al menos <strong>3 meses de edad</strong> para iniciar sus servicios de spa.</p>
+
+        </div>
+
+
+
+        <div class="card-requisito">
+
+            <i class="fas fa-syringe"></i>
+
+            <h4>Vacunación</h4>
+
+            <p>Debe contar con el <strong>ciclo de vacunación completo</strong> para proteger su salud y la de los demás.</p>
+
+        </div>
+
+
+
+        <div class="card-requisito">
+
+            <i class="fas fa-heartbeat"></i>
+
+            <h4>Salud</h4>
+
+            <p>Es indispensable que se encuentre en <strong>buen estado de salud</strong> general al momento de la cita.</p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="nota-importante">
+
+        <p><i class="fas fa-exclamation-triangle"></i> <strong>Nota importante:</strong> Para mascotas agresivas o en estado de gestación, se requiere <strong>autorización previa del médico veterinario</strong> para realizar el servicio.</p>
+
+    </div>
        
         
             
