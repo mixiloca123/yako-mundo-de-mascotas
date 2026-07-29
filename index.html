@@ -356,28 +356,97 @@
 <section class="servicios-gatos">
     <h2 class="titulo-seccion" style="text-align:center; font-size: 2.5rem; margin-bottom: 40px; font-weight: 800;">Nuestros Servicios Principales</h2>
     
-    <div class="contenedor-cards">
-        <div class="servicio-card">
-            <div class="imagen-container">
-                <img src="imagen baño/foto baño.png" alt="Servicio de Baño Yako">
-            </div>
-            <div class="info-servicio">
-                <h3>Baño </h3>
-                <p>Cuidamos a tu mascota con un servicio de baño  que incluye baño con agua tibia, productos especializados para su piel y pelaje, despejo de puntejos, corte de uñas, limpieza de oídos, limpieza dental básica y corte higiénico, garantizando una experiencia segura, cómoda y confortable. <strong></strong></p>
-            </div>
+    <div class="servicio-card">
+        <div class="imagen-container">
+            <img src="imagen baño/peluqueria 2.png" alt="Servicio de Peluquería Yako">
         </div>
-
-        <div class="servicio-card">
-            <div class="imagen-container">
-                <img src="imagen baño/peluqueria 2.png" alt="Servicio de Peluquería Yako">
-            </div>
-            <div class="info-servicio">
-                <h3>Baño y Peluquería</h3>
-                <p>Nuestro servicio de baño y peluquería incluye todo lo necesario para el cuidado de tu mascota: baño, corte de uñas, limpieza de oídos, limpieza dental básica,  despejo de pulpejos y hidratación  y corte según la raza..</p>
-            </div>
+        <div class="info-servicio">
+            <h3>Baño y Peluquería</h3>
+            <p>Nuestro servicio de baño y peluquería incluye todo lo necesario para el cuidado de tu mascota: baño, deslanado, corte de uñas, limpieza de oídos, limpieza dental básica, despejar e hidratar pulpejos y nariz, corte de acuerdo a la raza y gusto del cliente.</p>
         </div>
     </div>
+</section>
+    <style>
 
+
+    /* Contenedor principal de la sección */
+.servicios-gatos {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo horizontalmente */
+}
+
+/* Tarjeta del servicio centrada y adaptable */
+.servicio-card {
+    display: flex;
+    flex-direction: column; /* En pantallas pequeñas la imagen va arriba y el texto abajo */
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 850px; /* Tamaño máximo ideal para que no se estire demasiado en PC o TV */
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+/* Contenedor de la imagen */
+.imagen-container {
+    width: 100%;
+    height: 300px; /* Altura predeterminada para móviles */
+    overflow: hidden;
+}
+
+.imagen-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la imagen se deforme */
+    display: block;
+}
+
+/* Contenedor de la información */
+.info-servicio {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-servicio h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333333;
+}
+
+.info-servicio p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555555;
+    margin: 0;
+}
+
+/* --- DISEÑO RESPONSIVO PARA COMPUTADORES Y TABLETS (Pantallas medianas y grandes) --- */
+@media (min-width: 768px) {
+    .servicio-card {
+        flex-direction: row; /* Imagen a un lado y texto al otro en pantallas grandes */
+    }
+
+    .imagen-container {
+        width: 50%; /* La imagen ocupa la mitad del ancho */
+        height: auto;
+    }
+
+    .info-servicio {
+        width: 50%; /* El texto ocupa la otra mitad */
+        padding: 40px;
+    }
+}
+</style>
    <section class="seccion-adicionales" style="margin-top: 60px;">
     <h2 class="titulo-seccion" style="font-size: 42px;">
         Cuidados Especiales
@@ -1587,10 +1656,10 @@ function moverCarrusel(direccion) {
 
         <div class="columna-mapa">
             <h3 class="titulo-rojo">SERVICIOS</h3>
-            <a href="bano.html">Baño para mascotas</a>
-            <a href="peluquería.html">Peluquería</a>
+            <a href="bano.html">Baño y Peluquería para mascotas</a>
+           
             <a href="domicilio.html">Domicilio</a>
-            <a href="casas.html">Fabricación de Casas</a>
+            <a href="casas.html">Fabricación de Casas en madera ,gimnasios, camas ,escaleras,comederos elevados en madera</a>
             <a href="impresiones.html">Impresiones</a>
             <h4 style="color: white; margin-top: 20px;">MAPA</h4>
             <iframe src="https://www.google.com/maps/embed?pb=!4v1781979639229!6m8!1m7!1s27UfUzJcKRV0tPKpCvhN1A!2m2!1d4.864792446980422!2d-74.06118240904556!3f168.56!4f-19.72!5f0.7820865974627469" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
